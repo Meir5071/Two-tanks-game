@@ -1,0 +1,262 @@
+/**
+     * left arrow = 130
+     * up arrow = 131
+     * right arrow = 132
+     * down arrow = 133
+     * home = 134
+     * End = 135
+     * page up = 136
+     * page down = 137
+     * insert = 138
+     * delete = 139
+     * ESC = 140
+     * F1 - F12 = 141 - 152
+	 * a = 65
+	 * d = 68
+	 * w = 87
+	 * s = 83
+	 * z = 90
+	 * space = 32
+     */
+
+
+
+class TowTanksGame {
+	
+	field Tank tank1, tank2;
+	
+	constructor TowTanksGame new() {
+		do Screen.clearScreen();
+		let tank1 = Tank.new(31, 8, 8);
+		let tank2 = Tank.new(0, 8, 8);
+		return this;
+		}
+
+	method void dispose() {
+		do tank1.dispose();
+		do tank2.dispose();
+        do Memory.deAlloc(this);
+        return;
+	}
+	method void run() {
+		var char key;
+		//var boolean changed_key;
+		let key = 0;
+		while (~(key = 140)) {	
+			let key = Keyboard.keyPressed();
+			// tank1
+			if (key = 130) {
+				if (tank1.get_direction() = 4) {
+					do tank1.move_forward();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank1.get_direction() = 6) {
+					do tank1.move_backward();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank1.get_direction() = 2) {
+					do tank1.turn_right();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank1.get_direction() = 8) {
+					do tank1.turn_left();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+			}
+			if (key = 131) {
+				if (tank1.get_direction() = 8) {
+					do tank1.move_forward();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank1.get_direction() = 2) {
+					do tank1.move_backward();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank1.get_direction() = 6) {
+					do tank1.turn_left();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank1.get_direction() = 4) {
+					do tank1.turn_right();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+			}
+			if (key = 132) {
+				if (tank1.get_direction() = 6) {
+					do tank1.move_forward();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank1.get_direction() = 4) {
+					do tank1.move_backward();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank1.get_direction() = 2) {
+					do tank1.turn_left();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank1.get_direction() = 8) {
+					do tank1.turn_right();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+			}
+			if (key = 133) {
+				if (tank1.get_direction() = 2) {
+					do tank1.move_forward();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank1.get_direction() = 8) {
+					do tank1.move_backward();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank1.get_direction() = 6) {
+					do tank1.turn_right();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank1.get_direction() = 4) {
+					do tank1.turn_left();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+			}
+		
+		// tank2
+			if (key = 65) {
+				if (tank2.get_direction() = 4) {
+					do tank2.move_forward();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank2.get_direction() = 6) {
+					do tank2.move_backward();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank2.get_direction() = 2) {
+					do tank2.turn_right();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank2.get_direction() = 8) {
+					do tank2.turn_left();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+			}
+			if (key = 87) {
+				if (tank2.get_direction() = 8) {
+					do tank2.move_forward();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank2.get_direction() = 2) {
+					do tank2.move_backward();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank2.get_direction() = 6) {
+					do tank2.turn_left();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank2.get_direction() = 4) {
+					do tank2.turn_right();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+			}
+			if (key = 68) {
+				if (tank2.get_direction() = 6) {
+					do tank2.move_forward();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank2.get_direction() = 4) {
+					do tank2.move_backward();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank2.get_direction() = 2) {
+					do tank2.turn_left();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank2.get_direction() = 8) {
+					do tank2.turn_right();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+			}
+			if (key = 83) {
+				if (tank2.get_direction() = 2) {
+					do tank2.move_forward();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank2.get_direction() = 8) {
+					do tank2.move_backward();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank2.get_direction() = 6) {
+					do tank2.turn_right();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+				if (tank2.get_direction() = 4) {
+					do tank2.turn_left();
+					while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				}
+			}
+			if (key = 128) {
+				if (tank1.get_x() = tank2.get_x()) {
+					if (tank1.get_y() = tank2.get_y()) {do TowTanksGame.victory(1);return;}// victory
+					if (tank1.get_y() > tank2.get_y()) {
+						if (tank1.get_direction() = 8) {do TowTanksGame.victory(1);return;}// victory
+					}
+					if (tank1.get_y() < tank2.get_y()) {
+						if (tank1.get_direction() = 2) {do TowTanksGame.victory(1);return;}// victory
+					}
+				}
+				if (tank1.get_y() = tank2.get_y()) {
+					if (tank1.get_x() = tank2.get_x()) {do TowTanksGame.victory(1);return;}// victory
+					if (tank1.get_x() > tank2.get_x()) {
+						if (tank1.get_direction() = 4) {do TowTanksGame.victory(1);return;}// victory
+					}
+					if (tank1.get_x() < tank2.get_x()) {
+						if (tank1.get_direction() = 6) {do TowTanksGame.victory(1);return;}// victory
+					}
+				}
+			}
+			if (key = 32) {
+				if (tank1.get_x() = tank2.get_x()) {
+					if (tank1.get_y() = tank2.get_y()) {do TowTanksGame.victory(2);return;}// victory
+					if (tank1.get_y() > tank2.get_y()) {
+						if (tank2.get_direction() = 2) {do TowTanksGame.victory(2);return;}// victory
+					}
+					if (tank1.get_y() < tank2.get_y()) {
+						if (tank2.get_direction() = 8) {do TowTanksGame.victory(2);return;}// victory
+					}
+				}
+				if (tank1.get_y() = tank2.get_y()) {
+					if (tank1.get_x() = tank2.get_x()) {do TowTanksGame.victory(2);return;}// victory
+					if (tank1.get_x() > tank2.get_x()) {
+						if (tank2.get_direction() = 6) {do TowTanksGame.victory(2);return;}// victory
+					}
+					if (tank1.get_x() < tank2.get_x()) {
+						if (tank2.get_direction() = 4) {do TowTanksGame.victory(2);return;}// victory
+					}
+				}
+			}
+		}
+		while (Keyboard.keyPressed() = 0) {}
+		while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+        return;
+	}
+	function void victory(int winner) {
+		var String str1, str2, str3;
+		let str1 = "Tank";
+		let str2 = " won!";
+		let str3 = "Press any key to return to Main Menu!";
+		while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+		do Screen.clearScreen();
+		do Output.moveCursor(0,0);
+		do Output.printString(str1);
+		do Output.printInt(winner);
+		do Output.printString(str2);
+		do Output.println();
+		do Output.println();
+		do Output.println();
+		do Output.println();
+		do Output.printString(str3);
+		while (Keyboard.keyPressed() = 0) {}
+		while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+		do str1.dispose();
+		do str2.dispose();
+		do str3.dispose();
+		return;
+	}
+}

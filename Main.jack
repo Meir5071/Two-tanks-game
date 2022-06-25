@@ -1,0 +1,81 @@
+class Main {
+	
+	function void main() {
+		var TowTanksGame game;
+		var String str1, str2, str3;
+		var char key;
+		var boolean do_init;
+		do Tank.init();
+		let str2 = "Main Menu: ";
+		let str1 = "Press dpd to play, and ";//doubleQuote
+		do str1.setCharAt(6, String.doubleQuote());
+		do str1.setCharAt(8, String.doubleQuote());
+		let str3 = "drd to view the rules.";
+		do str3.setCharAt(0, String.doubleQuote());
+		do str3.setCharAt(2, String.doubleQuote());
+		let do_init = true;
+		while (true) {
+			if (do_init) {
+				do Screen.clearScreen();
+				do Output.moveCursor(0,0);
+				do Output.printString(str2);
+				do Output.println();
+				do Output.println();
+				do Output.println();
+				do Output.println();
+				do Output.printString(str1);
+				do Output.printString(str3);
+				let do_init = false;
+			}
+			while (Keyboard.keyPressed() = 0) {}
+			let key = Keyboard.keyPressed();
+			if(key = 82){
+				while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				do Main.rules();
+				do Screen.clearScreen();
+				do Output.moveCursor(0,0);
+				let do_init = true;
+			}
+			if(key = 80){
+				while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+				let game = TowTanksGame.new();
+				do game.run();
+				do game.dispose();
+				do Screen.clearScreen();
+				do Output.moveCursor(0,0);
+				let do_init = true;
+			}
+		}
+		return;
+	}
+	function void rules() {
+		var String line1, line2, line3, line4, line5;
+		let line1 = "Rules:";
+		let line2 = "Tank1 moves with arrows(up, down, left, right) and shots with enter.";
+		let line3 = "Tank2 moves with w, a, s, d and shots with space.";
+		let line4 = "while playing press ESC to return to main menu.";
+		let line5 = "Press any key to return to main menu.";
+		do Screen.clearScreen();
+		do Output.moveCursor(0,0);
+		do Output.printString(line1);
+		do Output.println();
+		do Output.println();
+		do Output.println();
+		do Output.printString(line2);
+		do Output.println();
+		do Output.printString(line3);
+		do Output.println();
+		do Output.printString(line4);
+		do Output.println();
+		do Output.println();
+		do Output.printString(line5);
+		while (Keyboard.keyPressed() = 0) {}
+		while ((Keyboard.keyPressed() > 0)|(Keyboard.keyPressed() < 0)) {}
+		do line1.dispose();
+		do line2.dispose();
+		do line3.dispose();
+		do line4.dispose();
+		do line5.dispose();
+		return;
+	}
+}
