@@ -1,0 +1,52 @@
+class Imege {
+	
+	field Array data;
+	
+	constructor Imege new(int r1, int r2, int r3, int r4, int r5, int r6, int r7, int r8, int r9, int r10, int r11, int r12, int r13, int r14, int r15, int r16) {
+		let data = Array.new(16);
+		let data[0] = r1;
+		let data[1] = r2;
+		let data[2] = r3;
+		let data[3] = r4;
+		let data[4] = r5;
+		let data[5] = r6;
+		let data[6] = r7;
+		let data[7] = r8;
+		let data[8] = r9;
+		let data[9] = r10;
+		let data[10] = r11;
+		let data[11] = r12;
+		let data[12] = r13;
+		let data[13] = r14;
+		let data[14] = r15;
+		let data[15] = r16;
+		return this;
+		}
+
+	method void dispose() {
+		do data.dispose();
+        do Memory.deAlloc(this);
+        return;
+	}
+	method void print(int x, int y) {
+		var int memAddress;
+		let memAddress = 16384 + (512 * y) + x;
+		do Memory.poke(memAddress, data[0]);
+		do Memory.poke(memAddress + 32, data[1]);
+		do Memory.poke(memAddress + 64, data[2]);
+		do Memory.poke(memAddress + 96, data[3]);
+		do Memory.poke(memAddress + 128, data[4]);
+		do Memory.poke(memAddress + 160, data[5]);
+		do Memory.poke(memAddress + 192, data[6]);
+		do Memory.poke(memAddress + 224, data[7]);
+		do Memory.poke(memAddress + 256, data[8]);
+		do Memory.poke(memAddress + 288, data[9]);
+		do Memory.poke(memAddress + 320, data[10]);
+		do Memory.poke(memAddress + 352, data[11]);
+		do Memory.poke(memAddress + 384, data[12]);
+		do Memory.poke(memAddress + 416, data[13]);
+		do Memory.poke(memAddress + 448, data[14]);
+		do Memory.poke(memAddress + 480, data[15]);
+		return;
+	}
+}
