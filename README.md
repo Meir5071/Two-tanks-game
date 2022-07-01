@@ -22,7 +22,7 @@ To play the game do the next steps:
 * Put the vm files in a single directory.
 * Download the VMEmulator from https://www.nand2tetris.org.
 * Run the VMEmulator.
-* Select in the menu 'File' and in 'File' select 'Load Program' and point to the directory containing the .vm files
+* Select in the menu 'File' and in 'File' select 'Load Program' and point to the directory containing the VM files
 * Select in the menu 'View' and in 'View' select 'Animate' and in 'Animate' select 'No Animation' and set the slider to 'Fast'
 * When you ready to play press the F5 button to run the game.
 
