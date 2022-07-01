@@ -1,5 +1,4 @@
 # Two tanks game
-
 Two tanks game is a game written in jack. The game was written as part of the course Nand to Tetris. https://www.nand2tetris.org
 
 Two tanks game is a simple game for two players.
@@ -10,6 +9,9 @@ Here is a link to a video in with a demonstration of the game:
 https://www.youtube.com/watch?v=XhiALA1evZM
 
 ![plot](./imege.png)
+
+## Instractions of the game
+The instractions are writen in the game, and here is an image with them:
 
 ## Playing the game
 To play the game do the next steps:
