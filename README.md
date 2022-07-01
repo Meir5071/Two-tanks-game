@@ -7,6 +7,6 @@ the tanks are moving on a grid 32 on 16.
 Here is a link to a video in with a demonstration of the game:
 https://www.youtube.com/watch?v=XhiALA1evZM
 
-{/imege.png}
+![plot](./imege.png)
 
 ## Playing the game
